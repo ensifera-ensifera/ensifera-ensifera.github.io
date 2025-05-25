@@ -1,0 +1,280 @@
+/* Global */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Futura", sans-serif;
+}
+
+body {
+    background-color: teal;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+    font-family: "Dejavu Serif", serif;
+    margin: 5px 10px;
+}
+
+h1:hover {
+    color: gold;
+}
+
+.accent {
+    color: turquoise;
+}
+
+.accent2 {
+    color: gold;
+}
+
+.grey {
+    color: lightgrey;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    height: 57px;
+    width: 100%;
+    background-color: teal;
+    border-bottom: 3px solid turquoise;
+    z-index: 1;
+}
+
+header > * {
+    display: inline-block;
+}
+
+header nav {
+    float: right;
+    position: relative;
+    top: 2px;
+    right: 10px;
+}
+
+#menu {
+    font-size: 45px;
+    color: white;
+}
+
+#menu:hover {
+    color: gold;
+}
+
+/* Post buttons */
+
+main {
+    max-width: 550px;
+    position: relative;
+    top: 60px;
+    margin: 0px auto;
+    padding: 15px 0px;
+}
+
+#button-container {
+    background-color: whitesmoke;
+    margin: 20px 0px;
+    border-radius: 16px;
+    height: 90px;
+    padding: 2.5%;
+}
+
+#buttons {
+    width: 100%;
+    height: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+#buttons span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border: 5px solid whitesmoke;
+    border-radius: 20px;
+    background-color: turquoise;
+    color: white;
+    font-size: 30px;
+    font-family: serif;
+}
+
+#buttons span:hover {
+    color: turquoise;
+    border: 3px dotted gold;
+    background-color: whitesmoke;
+}
+
+/* Post body */
+
+article {
+    background-color: whitesmoke;
+    margin: 30px 0px;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+/* Top of post */
+
+.op {
+    box-sizing: border-box;
+    height: 50px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid turquoise;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.labels {
+    display: inline-block;
+    position: relative;
+    bottom: 14px;
+    width: 89%;
+    margin-left: 5px;
+}
+
+.labels span {
+    display: inline-block;
+}
+
+.username {
+    width: 60%;
+}
+
+.time {
+    width: 38%;
+    text-align: right;
+}
+
+.avatar {
+    border-radius: 50%;
+    margin-right: 3px;
+}
+
+/* Post content */
+
+.focus > * {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.quote {
+    font-size: 50px;
+    font-family: "Book Antiqua";
+    box-sizing: border-box;
+    padding: 6px 10px 10px;
+    background-color: turquoise;
+    color: white;
+    border-top: 0px solid teal;
+    border-bottom: 5px solid teal;
+
+}
+
+.caption {
+    padding: 10px;
+}
+
+p,
+li,
+h2 {
+    color: darkslategrey;
+}
+
+p {
+    padding-bottom: 10px;
+}
+
+h2 {
+    padding-bottom: 15px;
+}
+
+ul {
+    padding-left: 14px;
+}
+
+.promote {
+    display: block;
+    width: 75%;
+    position: relative;
+    left: 12.5%;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    background-color: gold;
+    color: white;
+    margin: 20px 0px 0px;
+    padding: 7px;
+    border: 2px dotted white;
+    border-radius: 5px;
+}
+
+/* Post footer */
+
+.bottom {
+    box-sizing: border-box;
+    height: 50px;
+    padding-bottom: 10px;
+    border-top: 1px solid turquoise;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.notes {
+    display: inline-block;
+    width: 50%;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.interact {
+    display: inline-block;
+    float: right;
+    padding-top: 8px;
+}
+
+.interact span {
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 30px;
+    text-align: center;
+    width: 30px;
+    height: 100%;
+}
+
+.interact span.share {
+    font-size: 35px;
+}
+
+.notes:hover {
+    color: turquoise;
+}
+
+.like:hover {
+    color: firebrick;
+}
+
+.share:hover {
+    color: forestgreen;
+}
+
+.bitcoin:hover {
+    color: gold;
+}
+
+/* Footer */
+
+footer {
+    position: relative;
+    top: 30px;
+    padding-bottom: 2px;
+}
+
+footer p {
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    max-width: 550px;
+    margin: 0 auto;
+}
