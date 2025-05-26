@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML cheatsheet</title>
+    <link href="./styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@900&family=Fauna+One&family=Handjet:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>HTML cheatsheet</h1>
+      <nav>
+        <div class="nav-container">
+            <a href="#intro">Intro</a>
+            <a href="#template">Template</a>
+            <a href="#tags">Tags</a>
+        </div>
+        <div class="nav-container">
+            <a href="#styling">Styling</a>
+            <a href="#hosting">Hosting</a>
+            <a href="#links">Links</a>
+        </div>
+      <nav>
+    </header>
+    <main>
+      <section id="intro">
+        <h2>Introduction</h2>
+        <p>
+            A mini assignment done for Codecademy as part of the Full Stack career path on 26.05.25. Not remotely a complete guide yet; I might expand it later.
+        </p>
+      </section>
+      <section id="template">
+        <h2>Basic template</h2>
+        <p>All HTML documents build on the following basic formatting:</p>
+        <pre>
+            <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    
+    &lt;/head&gt;
+
+    &lt;body&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code>
+        </pre>
+        <ul>
+            <li>
+                <p><code>&lt;!DOCTYPE html&gt;</code> tells the browser this is a HTML5 document.</p>
+            </li>
+            <li>
+                <p><code>&lt;html&gt;</code> contains all HTML code.</p>
+            </li>
+            <li>
+                <p><code>&lt;head&gt;</code> contains the metadata of a page: its title, links to stylesheets, etc.</p>
+            </li>
+            <li>
+                <p><code>&lt;body&gt;</code> contains the visible content of a page.</p>
+            </li>
+        </ul>
+      </section>
+      <section id="tags">
+        <h2>Tags</h2>
+        <h3>Some basic ones</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Use</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>&lt;title&gt;</code></td>
+                    <td>Page title (placed within <code>&lt;head&gt;</code>) that displays in the tab of modern browsers.</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;p&gt;</code></td>
+                    <td>Paragraph</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;h1&gt; to &lt;h6&gt;</code></td>
+                    <td>Headings</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;img&gt;</code></td>
+                    <td>Image; source set with <code>href</code> attribute</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;video&gt;</code></td>
+                    <td>Video; source set with <code>href</code> attribute</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;em&gt;</code></td>
+                    <td>Emphasises text (<em>italicises</em> by default)</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;strong&gt;</code></td>
+                    <td>Stronger emphasis (<strong>bolds</strong> by default)</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;a&gt;</code></td>
+                    <td>Hyperlink; target set with <code>href</code> attribute</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;div&gt;</code></td>
+                    <td>Nonspecific division tag. Useful for styling when combined with <code>class</code> and <code>id</code> attributes.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Semantic tags</h3>
+        <p>These make a page's HTML code much more readable than <code>&lt;div&gt;</code> soup. They also make the page more accessible for screen reader users.</p>
+        <p>Examples I've been using:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tag</td>
+                    <th>Use</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>&lt;nav&gt;</code></td>
+                    <td>Navigation menu</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;section&gt;</code></td>
+                    <td>Groups together related elements with a heading</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;aside&gt;</code></td>
+                    <td>An aside from the main text</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;figure&gt;</code></td>
+                    <td>Contains a figure and its caption</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;figcaption&gt;</code></td>
+                    <td>Figure caption</td>
+                </tr>
+            </tbody>
+        </table>
+      </section>
+      <section id="styling">
+        <h2>Styling</h2>
+        <h3>Ways to style a page</h3>
+        <ul class="boxlist">
+            <li>
+                <h4>Within individual tags</h4>
+                <p>CSS declarations can be placed within HTML tags using the <code>style</code> attribute. For example, <code>&lt;p style="color: red"&gt;</code> will turn a paragraph red.</p>
+                <p>This is inadvisable; you have to configure styles for every individual element on every page.</p>
+            </li>
+            <li>
+                <h4>Within a &lt;style&gt; element</h4>
+                <p>CSS code can be placed within a <code>&lt;style&gt;</code> element within a HTML document's <code>&lt;head&gt;</code> element.</p>
+                <p>This is much better than the previous method, but it still isn't best practice as every page of a site must be styled individually.</p>
+            </li>
+            <li>
+                <h4>Using a stylesheet</h4>
+                <p>A .css file containing CSS code can be used to style a webpage by placing this within the HTML document's <code>&lt;head&gt;</code> element:</p>
+                <code>&lt;link href="[path to file]" rel="stylesheet"&gt;</code>
+                <p>This is best practice; the same stylesheet can be used to style infinite pages.</p>
+            </li>
+        </ul>
+      </section>
+      <section id="hosting">
+        <h2>Hosting</h2>
+        <p>
+            For a static personal site, the following are both decent options:
+        </p>
+        <ul>
+            <li>
+                <a href="https://pages.github.com/">GitHub Pages</a>
+            </li>
+            <li>
+                <a href="https://neocities.org/">Neocities</a>
+            </li>
+        </ul>
+      </section>
+      <section id="links">
+        <h2>Useful links</h2>
+        <ul class="boxlist">
+            <li>
+                <h3><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></h3>
+                <p>Mozilla Developer Network's documentation is extremely useful for anything related to web development.</p>
+            </li>
+            <li>
+                <h3><a href="https://caniuse.com/">caniuse.com</a></h3>
+                <p>More detailed information on browser compatibility than MDN's articles.</p>
+            </li>
+            <li>
+                <h3><a href="https://validator.w3.org/">W3C Markup Validation Service</a></h3>
+                <p>Identifies syntax errors in HTML documents.</p>
+            </li>
+            <li>
+                <h3><a href="https://www.codecademy.com">Codecademy</a></h3>
+                <p>The resource I'm using to learn this course!</p>
+            </li>
+            <li>
+                <h3><a href="https://roadmap.sh/">roadmap.sh</a></h3>
+                <p>Free community built developer roadmaps that tell you what to learn for a wide variety of specialisations, frontend and full stack included.</p>
+            </li>
+            <li>
+                <h3><a href="https://motherfuckingwebsite.com/">motherfucking website</a></h3>
+                <p>
+                    Partly satirical but still has a really important point.
+                </p>
+            </li>
+        </ul>
+      </section>
+      <section id="credits">
+        <h2>Credits</h2>
+        <p><a href="https://www.freepik.com/free-vector/horizontally-vertically-seamless-abstract-vector-pattern_149274070.htm">Background image</a></p>
+      </section>
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>
+
+
+<!-- NOTE: To display html tags in text, use &lt; to represent < and &gt; to represent >. -->

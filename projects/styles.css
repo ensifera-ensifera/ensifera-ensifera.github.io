@@ -1,0 +1,219 @@
+/* Global stuff */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-padding-top: 17.5rem;
+}
+
+body {
+    background-color: rgb(238, 245, 242);
+}
+
+a {
+    text-decoration: none;
+    color:rgb(86, 178, 201);
+}
+
+/* Header */
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background-image: url("./bgsmaller.jpg");
+    padding: 1rem;
+    border-bottom: 0.3em solid rgb(203, 242, 243);
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, rgb(190,225,171), rgb(101, 167, 184));
+    opacity: .8;
+}
+
+header > * {
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    color: rgb(228, 252, 253);
+    float: left;
+    width: 60%;
+    font-family: Handjet, sans-serif;
+    line-height: 100%;
+    font-size: 5rem;
+    margin-right: 1rem;
+}
+
+.nav-container {
+    display: inline-block;
+}
+
+nav a {
+    color: #FFF;
+    text-transform: lowercase;
+    font-weight: bold;
+    font-family: "Doto", sans-serif;
+    font-size: 1.3rem;
+    display: inline-block;
+    width: 8rem;
+    height: 2.2rem;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 2rem;
+}
+
+/* Main */
+
+main {
+    padding: 1rem;
+    font-size: 125%;
+    max-width: 47rem;
+    margin: 0 auto;
+}
+
+h2,
+h3 {
+    font-family: "Doto", sans-serif;
+    font-weight: 900;
+    padding-left: 0.5rem;
+}
+
+h2 {
+    margin: 2.5rem 0 1.5rem;
+    color: rgb(228, 252, 253);
+    background-color: rgb(83, 134, 143);
+}
+
+h3 {
+    margin: 1.5rem 0 1rem;
+    color: rgb(83, 134, 143);
+}
+
+p,
+td,
+th {
+    font-family: "Fauna One", sans;
+    line-height: 1.5em;
+}
+
+p {
+    margin: 0.7rem 0;
+    padding: 0.5rem;
+}
+
+pre {
+    background-color: rgb(208, 235, 218);
+    color: rgb(83, 134, 143);
+    padding-left: 1rem;
+}
+
+code {
+    background-color: rgb(208, 235, 218);
+    color: rgb(83, 134, 143);
+}
+
+ul {
+    padding-left: 2em;
+    list-style-type: square; 
+}
+
+/* Table  */
+
+thead {
+    background-color:rgb(101, 167, 184);
+    color: white;
+    height: 2.2rem;
+}
+
+tbody {
+    background-color:rgb(224, 237, 238);
+}
+
+td {
+    padding-left: 0.5rem;
+    font-size: 90%; 
+}
+
+
+/* Box list formatting */
+
+.boxlist {
+    padding: 0;
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-auto-flow: row;
+}
+
+@media only screen and (max-width: 42em) {
+    .boxlist {
+      display: flex;
+      grid-template-columns: 100%;
+      flex-direction: column;
+    }
+  }
+
+.boxlist li {
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 70%;
+    padding: 1em;
+    margin: 0.5em;
+    background-color: rgb(81, 186, 194);
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.boxlist li > * {
+    padding: 0;
+}
+
+.boxlist li a,
+.boxlist li h4 {
+    color: rgb(171, 235, 134);
+    font-family: Doto, sans-serif;
+    font-weight: 900;
+    font-size: 130%;
+    margin-bottom: 1.5em;
+}
+
+/* Footer */
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 2rem;
+    background-image: url("./bgsmaller.jpg");
+    padding: 1rem;
+    border-top: 0.3em solid rgb(203, 242, 243);
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, rgb(190,225,171), rgb(101, 167, 184));
+    opacity: .8;
+}
+
+header > * {
+    position: relative;
+    z-index: 2;
+}
