@@ -133,6 +133,11 @@ ul {
 
 /* Table  */
 
+table {
+    padding: 0 1em;
+    width: 100%;
+}
+
 thead {
     background-color:rgb(101, 167, 184);
     color: white;
